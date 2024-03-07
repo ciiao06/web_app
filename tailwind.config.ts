@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss"
 
 const config = {
+  mode: "jit",
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -16,6 +17,11 @@ const config = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    lineClamp: {
+      1: 1,
+      2: 2,
+      3: 3
     },
     extend: {
       colors: {
@@ -52,6 +58,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'default': '#4f46e5',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,7 +81,12 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  variants: {
+    lineClamp: ["responsive"]
+  },
+  plugins: 
+  [require("tailwindcss-animate"),
+  require('tailwindcss-line-clamp'),]
 } satisfies Config
 
 export default config
