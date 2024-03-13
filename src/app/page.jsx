@@ -538,7 +538,7 @@ const itemDetails = [
 
 export function SvgItems() {
   return (
-    itemDetails.map(({ icon: Icon, ...items }:any) => {
+    itemDetails.map(({ icon: Icon, ...items }) => {
       return (
         <div className="flex" key={items.label} >
           <div className="inline-flex bg-violet-600 rounded-lg float-left w-10 h-10 items-center justify-center">
