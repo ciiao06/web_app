@@ -4,10 +4,10 @@ const config = {
   mode: "jit",
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx,js,jsx}',
+    './components/**/*.{ts,tsx,js,jsx}',
+    './app/**/*.{ts,tsx,js,jsx}',
+    './src/**/*.{ts,tsx,js,jsx}',
 	],
   prefix: "",
   theme: {
@@ -23,6 +23,22 @@ const config = {
       2: 2,
       3: 3
     },
+    // screens: {
+    //   'sm': {'max': '767px'},
+    //   // => @media (min-width: 640px and max-width: 767px) { ... }
+
+    //   'md': {'min': '768px'},
+    //   // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+    //   // 'lg': {'min': '1024px'}
+    //   // // => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+    //   // 'xl': {'min': '1280px', 'max': '1535px'},
+    //   // // => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+    //   // '2xl': {'min': '1536px'},
+    //   // // => @media (min-width: 1536px) { ... }
+    // },
     extend: {
       colors: {
         border: "hsl(var(--border))",
