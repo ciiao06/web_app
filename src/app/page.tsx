@@ -536,7 +536,7 @@ const itemDetails = [
 //   )
 // }
 
-export function SvgItems() {
+function SvgItems() {
   return (
     itemDetails.map(({ icon: Icon, ...items }:any) => {
       return (
