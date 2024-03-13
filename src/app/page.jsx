@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 import {
   DropdownMenu,
@@ -150,13 +151,16 @@ export default function Home() {
           </div>
         </div>
         {/* Services */}
-        <div className="flex justify-center items-center px-4 max-w-[80rem]">
-          <div className="grid items-center grid-cols-4 md:grid-cols-5 gap-y-12 gap-x-24 md:max-w-none max-w-lg mx-auto">
-            {objects.map((item) => (
-              <img key={item.name} src={item.src} alt={item.name} className={item.name === 'Statamic' ? "col-start-2 col-end-4 md:col-span-1 object-contain" : "md:col-span-1 col-span-2 object-contain w-full h-auto max-h-12 md:max-w-xl align-middle gap-x-6"} />
-            ))}
+        <Marquee>
+          <div className="flex justify-center items-center px-4 max-w-[80rem]">
+            <div className="grid items-center grid-cols-4 md:grid-cols-5 gap-y-12 gap-x-24 md:max-w-none max-w-lg mx-auto">
+              {objects.map((item) => (
+                <img key={item.name} src={item.src} alt={item.name} className={item.name === 'Statamic' ? "col-start-2 col-end-4 md:col-span-1 object-contain" : "md:col-span-1 col-span-2 object-contain w-full h-auto max-h-12 md:max-w-xl align-middle gap-x-6"} />
+              ))}
+            </div>
           </div>
-        </div>
+        </Marquee>
+        
 
         <div className="flex bg-transparent justify-center mt-16 px-8 mx-auto">
           <p className="flex px-4 py-1.5 rounded-3xl text-sm border border-solid border-slate-200 gap-1 hover:border-slate-400">
