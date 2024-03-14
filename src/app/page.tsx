@@ -153,9 +153,9 @@ export default function Home() {
         {/* Services */}
         <Marquee>
           <div className="flex justify-center items-center px-4 max-w-[80rem]">
-            <div className="grid items-center grid-cols-4 md:grid-cols-5 gap-y-12 gap-x-24 md:max-w-none max-w-lg mx-auto">
+            <div className="grid items-center grid-cols-5 gap-y-12 gap-x-24 max-w-none mx-auto">
               {objects.map((item) => (
-                <img key={item.name} src={item.src} alt={item.name} className={item.name === 'Statamic' ? "col-start-2 col-end-4 md:col-span-1 object-contain" : "md:col-span-1 col-span-2 object-contain w-full h-auto max-h-12 md:max-w-xl align-middle gap-x-6"} />
+                <img key={item.name} src={item.src} alt={item.name} className= "col-span-1 object-contain w-full h-auto ßmax-w-xl align-middle gap-x-6"/>
               ))}
             </div>
           </div>
